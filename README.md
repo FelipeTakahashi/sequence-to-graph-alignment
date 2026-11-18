@@ -4,7 +4,7 @@ This work investigates _Sequence-to-Graph Alignment_, a well-known problem in Bi
 Very informally, we state: given a **sequence graph** $G(V,E,\sigma)$ with vertices $v\in V$ labeled over $\Sigma$, and a query sequence $q$, minimize the number of label **substitutions** in the graph such that there exists a simple path $p$ that spells $q$. Do note that this problem is equivalent to minimizing the substitution (Hamming) distance from $p$ to $q$. It is possible to show that this variant is NP-hard through a reduction of the Directed Hamiltonian Path.   
 
 ## Content
-We present three heuristics ([Greedy](placeholder), [Beam Search](placeholder), [BRKGA](placeholder)) for SGAP.
+We present three heuristics ([Greedy](https://github.com/FelipeTakahashi/sequence-to-graph-alignment/blob/main/src/heuristic/Greedy.cpp), [Beam Search](https://github.com/FelipeTakahashi/sequence-to-graph-alignment/blob/main/src/heuristic/BeamSearch.cpp), [BRKGA](https://github.com/FelipeTakahashi/sequence-to-graph-alignment/blob/main/src/heuristic/Brkga.cpp)) for SGAP.
 
 ### Greedy
 A multistart heuristic and relies on greedily selecting the neighbor that matches the next symbol of the query, adopting vertex out-degree as a tiebreaker.
@@ -26,7 +26,7 @@ The input file must contain a **sequence graph** and a **query**. As is, the pro
 <edges>
 <query>  
 ```
-The parser can be easily modified at [```Parser.hpp```](placeholder) and [```Parser.cpp```](placeholder).
+The parser can be easily modified at [```Parser.cpp```](https://github.com/FelipeTakahashi/sequence-to-graph-alignment/blob/main/src/utils/Parser.cpp).
 
 ## Compiling and Executing
 
